@@ -1,1 +1,35 @@
+# http://materialdesignicons.com/cdn/7.4.47/
+
+# Define icons used
+font:
+  - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
+    id: icon_font
+    size: 36
+    bpp: 4
+    glyphs: [
+      "\U000F010C",  # mdi-car-battery
+      "\U000F008A",  # mdi-battery-charging-80
+      "\U000F095B",  # mdi-sine-wave
+      "\U000F1A73",  # mdi-solar-power-variant
+      "\U000F058F",  # mdi-water-pump
+      "\U000F09A1",  # mdi-shower-head
+      "\U000F05A9",  # mdi-wifi
+      "\U000F05AA",  # mdi-wifi-off
+      "\U000F0596",  # mdi-weather-pouring
+      "\U000F0A72",  # mdi-solar-power
+      ]
+# https://pictogrammers.github.io/@mdi/font/7.4.47/
+# Map icons to names
+substitutions:
+  battery:       "\U000F010C"
+  battery_cells: "\U000F008A"
+  inverter:      "\U000F095B"
+  mppt:          "\U000F1A73"
+  water_pump:    "\U000F058F"
+  chauffo:       "\U000F09A1"
+  wifion:        "\U000F05A9"
+  wifioff:       "\U000F05AA"
+  orana:         "\U000F0596"
+  solarprod:     "\U000F0A72"
+  
 
