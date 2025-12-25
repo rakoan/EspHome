@@ -41,5 +41,6 @@ script:
  - id: display_on
    then:
      - lvgl.resume:
-     - delay: 10ms
+     - lvgl.widget.redraw
+     #- delay: 10ms
      - switch.turn_on: backlight
