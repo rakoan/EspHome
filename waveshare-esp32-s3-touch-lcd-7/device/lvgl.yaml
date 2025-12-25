@@ -64,6 +64,11 @@ lvgl:
                   align: bottom_left
                   id: battery_soc_label
                   text: "SoC"
+              - label:
+                  text_font: $value_font
+                  align: bottom_right
+                  id: battery_soc_value                
+                  text: "-%"
             on_press:
               #- homeassistant.service:
                #   service: scene.turn_on
