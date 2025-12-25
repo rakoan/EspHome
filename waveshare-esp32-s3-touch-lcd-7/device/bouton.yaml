@@ -1,5 +1,6 @@
 substitutions:
   icon_font: icon_font
+  icon_small_font: icon_small_font
   text_font: roboto17_font
   text_value_font: roboto30_font
   text_value2_font: roboto20_font
