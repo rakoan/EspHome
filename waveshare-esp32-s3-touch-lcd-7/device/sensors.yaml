@@ -1,12 +1,14 @@
 sensor:
   - platform: homeassistant
-    entity_id: sensor.soc
+    entity_id: sensor.victron_hub_battery_state_of_charge
     id: battery_soc
     on_value:
       then:
-        lvgl.widget.update:
-          id: battery_soc_button
-          state:
-            checked: !lambda return x;
-      - lvgl.label.update:
-          id: battery_soc_value
+        - lvgl.widget.update:
+            id: battery_soc_button
+            state:
+              checked: !lambda return x < 50 ? 1 : 0;
+        - lvgl.label.update:
+            id: battery_soc_value
+            text:
+              format: "%.1f"
