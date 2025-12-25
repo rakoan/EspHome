@@ -25,8 +25,8 @@ font:
     bpp: 4
     
   - file: "gfonts://Roboto"
-    id: roboto25_font
-    size: 25
+    id: roboto20_font
+    size: 20
     bpp: 4
     
 lvgl:
