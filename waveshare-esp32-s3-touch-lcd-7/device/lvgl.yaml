@@ -24,7 +24,7 @@ lvgl:
           text_color: 0xFFFFFF
       # wifi status
       - label:
-          text_font: $icon_font
+          text_font: $icon_small_font
           text: "\U000F05AA"
           id: display_wifi
           align: top_right
