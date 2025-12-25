@@ -33,12 +33,12 @@ script:
             auto now = id(homeassistant_time).now();
             snprintf(time_buf, sizeof(time_buf), "%02d:%02d", now.hour, now.minute);
             return time_buf;
- - id: display_off
+  - id: display_off
    then:
      - switch.turn_off: backlight
      - lvgl.pause:
          show_snow:true
- - id: display_on
+  - id: display_on
    then:
      - lvgl.resume:
      - lvgl.widget.redraw
