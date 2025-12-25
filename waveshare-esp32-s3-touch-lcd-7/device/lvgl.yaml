@@ -47,7 +47,7 @@ lvgl:
       
       widgets:
       
-        # Battery SoC
+        #1 Battery SoC
         - button: 
             height: $button_height_single
             width: $button_width
@@ -80,7 +80,7 @@ lvgl:
                 #  data:
                  #   entity_id: scene.office_features
 
-        # Battery Total Voltage
+        #2 Battery Total Voltage
         - button: 
             height: $button_height_single
             width: $button_width
@@ -108,7 +108,7 @@ lvgl:
                   id: battery_voltage_unit                
                   text: "V"    
                     
-        # Battery Power
+        #3 Battery Power
         - button: 
             height: $button_height_single
             width: $button_width
@@ -136,7 +136,7 @@ lvgl:
                   id: battery_power_unit                
                   text: "W"    
 
-        # Battery Duration
+        #4 Battery Duration
         - button: 
             height: $button_height_single
             width: $button_width
@@ -160,7 +160,7 @@ lvgl:
                   id: battery_duration_value                
                   text: "-"
 
-        # BMS Cells Voltage
+        #5 BMS Cells Voltage
         - button: 
             height: $button_height_single
             width: $button_width
@@ -192,7 +192,7 @@ lvgl:
                   id: battery_power_unit                
                   text: "V"   
 
-        # BMS Cell Delta
+        #6 BMS Cell Delta
         - button: 
             height: $button_height_single
             width: $button_width
@@ -219,7 +219,7 @@ lvgl:
                   id: bms_cell_delta_unit                
                   text: "mV" 
 
-        # BMS cell Temperature
+        #7 BMS cell Temperature
         - button: 
             height: $button_height_single
             width: $button_width
@@ -251,7 +251,7 @@ lvgl:
                   id: bms_temp_unit                
                   text: "°C" 
                     
-        # BMS Mosfet Temperature
+        #8 BMS Mosfet Temperature
         - button: 
             height: $button_height_single
             width: $button_width
@@ -278,7 +278,7 @@ lvgl:
                   id: bms_mosfet_temp_unit                
                   text: "°C" 
 
-        # Inverter Voltage/Freq/Amp
+        #9 Inverter Voltage/Freq/Amp
         - button: 
             height: $button_height_single
             width: $button_width
@@ -304,7 +304,7 @@ lvgl:
                   id: inverter_freq_label 
                   text: "- Hz"
                   
-        # Inverter Power
+        #10 Inverter Power
         - button: 
             height: $button_height_single
             width: $button_width
@@ -331,7 +331,7 @@ lvgl:
                   id: inverter_power_unit                
                   text: "kW" 
 
-        # Inverter Temperature AC-DC
+        #11 Inverter Temperature AC-DC
         - button: 
             height: $button_height_single
             width: $button_width
@@ -363,7 +363,7 @@ lvgl:
                   id: inverter_temp_unit                
                   text: "°C" 
 
-        # Inverter Energy Output
+        #12 Inverter Energy Output
         - button: 
             height: $button_height_single
             width: $button_width
@@ -390,301 +390,206 @@ lvgl:
                   id: inverter_energy_unit                
                   text: "kWh" 
                     
-        # Office Features Scene
+        #13 MPPT status
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: mppt_status_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: mppt_status_icon                
+                  text: $mppt
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: mppt_status_label
+                  text: "MPPT"
+              - label:
+                  text_font: $text_value2_font
+                  align: CENTER
+                  id: mppt_status_value 
+                  text: "Stand By"
 
-        # Office Features Scene
+        #14 MPPT Power
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: mppt_power_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: mppt_power_icon                
+                  text: $mppt
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: mppt_power_label
+                  text: "Power"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: mppt_power_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: mppt_power_unit                
+                  text: "kW" 
 
-        # Office Features Scene
+        #15 MPPT Temperature
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: mppt_temp_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: mppt_temp_icon                
+                  text: $mppt
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
-
-        # Office Features Scene
+                  id: mppt_temp_label
+                  text: "T°"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: mppt_temp_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: mppt_temp_unit                
+                  text: "°C" 
+                  
+        #16 MPPT Energy
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: mppt_energy_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: mppt_energy_icon                
+                  text: $mppt
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
-
-        # Office Features Scene
+                  id: mppt_energy_label
+                  text: "Energy"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: mppt_energy_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: mppt_energy_unit                
+                  text: "kWh" 
+        #17 Chauffe-O
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: chauffe_o_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: chauffe_o_icon                
+                  text: $chauffo
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: chauffe_o_label
+                  text: "Chauffe-O"
+              - label:
+                  align: top_right
+                  id: chauffe_o_status                
+                  text: "OFF" 
+              - label:
+                  align: bottom_right
+                  id: chauffe_o_temp                
+                  text: "-°C" 
+                  
+        #18 Water Pump
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: water_pump_button
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: water_pump_icon                
+                  text: $water_pump
+              - label:
+                  align: bottom_left
+                  id: water_pump_label
+                  text: "Pump"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: water_pump_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: water_pump_unit                
+                  text: "Bar" 
                     
-        # Office Features Scene
+        #19 Meteo
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: meteo_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: meteo_icon                
+                  text: $orana
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: meteo_rain_label
+                  text: "- mm"
+              - label:
+                  align: bottom_right
+                  id: meteo_temp_label
+                  text: "-°C"
 
-        # Office Features Scene
+        #20 Solar Prod Forecast
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: solar_fcst_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: solar_fcst_icon                
+                  text: $solarprod
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: solar_fcst_today_label
+                  text: "- kWh"
+              - label:
+                  align: bottom_right
+                  id: solar_fcst_tomorrow_label
+                  text: "- kWh"
 
-        # Office Features Scene
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: office_scene_features_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
-              - label:
-                  align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
 
-        # Office Features Scene
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: office_scene_features_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
-              - label:
-                  align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
 
-        # Office Features Scene
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: office_scene_features_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
-              - label:
-                  align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
-                    
-        # Office Features Scene
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: office_scene_features_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
-              - label:
-                  align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
-
-        # Office Features Scene
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: office_scene_features_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
-              - label:
-                  align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
-
-        # Office Features Scene
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: office_scene_features_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
-              - label:
-                  align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+       
