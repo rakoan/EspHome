@@ -52,7 +52,7 @@ lvgl:
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: battery_soc
+            id: battery_soc_button
             styles: control
             widgets:
               - label:
@@ -65,38 +65,48 @@ lvgl:
                   id: battery_soc_label
                   text: "SoC"
               - label:
-                  text_font: $value_font
-                  align: bottom_right
+                  text_font: roboto40_font
+                  align: CENTER
+                  text_align: CENTER
                   id: battery_soc_value                
-                  text: "-%"
-            on_press:
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: battery_soc_unit                
+                  text: "%"                  
+            #on_press:
               #- homeassistant.service:
                #   service: scene.turn_on
                 #  data:
                  #   entity_id: scene.office_features
 
-        # Office Features Scene
+        # Battery Total Voltage
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: battery_voltage_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: battery_voltage_icon                
+                  text: $battery
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: battery_voltage_label
+                  text: "Voltage"
+              - label:
+                  text_font: roboto40_font
+                  align: CENTER
+                  text_align: CENTER
+                  id: battery_voltage_value                
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: battery_voltage_unit                
+                  text: "V"    
                     
         # Office Features Scene
         - button: 
