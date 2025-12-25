@@ -28,8 +28,6 @@ lvgl:
           id: display_wifi
           styles: roboto15_style
           align: top_right
-          x: 8
-          y: 4
           text_color: 0xFFFFFF
           
   pages:
@@ -178,14 +176,9 @@ lvgl:
                   text: "BMS"
               - label:
                   text_font: $text_value2_font
-                  align: top_mid
-                  id: battery_cell_max_value
-                  text: "3.35"
-              - label:
-                  text_font: $text_value2_font
-                  align: bottom_mid
-                  id: battery_cell_min_value 
-                  text: "3.31"
+                  align: right_mid
+                  id: battery_cell_max_min_value
+                  text: "3.35 | 3.32"
               - label:
                   align: top_right
                   id: battery_cell_volt_unit                
@@ -290,6 +283,7 @@ lvgl:
                   id: Inverter_amp_label
                   text: "10 A"
               - label:
+                  text_font: $text_value2_font
                   align: top_right
                   id: inverter_volt_label 
                   text: "230 V"                  
@@ -344,14 +338,9 @@ lvgl:
                   text: "T°"
               - label:
                   text_font: $text_value2_font
-                  align: top_mid
-                  id: inverter_ac_temp_value
-                  text: "28.4"
-              - label:
-                  text_font: $text_value2_font
-                  align: bottom_mid
-                  id: inverter_dc_temp_value 
-                  text: "27.5"
+                  align: right_mid
+                  id: inverter_ac_dc_temp_value
+                  text: "28.4 | 27.5"
               - label:
                   align: top_right
                   id: inverter_temp_unit                
@@ -505,14 +494,18 @@ lvgl:
                   id: chauffe_o_label
                   text: "Chauffe-O"
               - label:
-                  align: top_right
+                  align: bottom_right
                   id: chauffe_o_status                
                   text: "OFF" 
+              - label:
+                  align: top_right
+                  id: chauffe_o_temp_unit                
+                  text: "°C" 
               - label:
                   text_font: $text_value_font
                   align: right_mid
                   id: chauffe_o_temp                
-                  text: "55.2°C" 
+                  text: "55.2" 
                   
         #18 Water Pump
         - button: 
@@ -581,6 +574,10 @@ lvgl:
                   align: top_left
                   id: solar_fcst_icon                
                   text: $solarprod
+              - label:
+                  align: bottom_left
+                  id: solar_fcst_label
+                  text: "Prev."
               - label:
                   align: bottom_right
                   id: solar_fcst_tomorrow_label
