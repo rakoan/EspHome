@@ -515,7 +515,8 @@ lvgl:
                   id: chauffe_o_status                
                   text: "OFF" 
               - label:
-                  align: bottom_right
+                  text_font: $text_value2_font
+                  align: center
                   id: chauffe_o_temp                
                   text: "55.2°C" 
                   
@@ -560,11 +561,16 @@ lvgl:
                   id: meteo_icon                
                   text: $orana
               - label:
-                  align: bottom_left
+                  text_font: $text_value2_font
+                  align: CENTER
                   id: meteo_rain_label
-                  text: "00mm"
+                  text: "75"
               - label:
-                  align: bottom_right
+                  align: top_right
+                  id: meteo_rain_unit
+                  text: "mm"
+              - label:
+                  align: bottom_left
                   id: meteo_temp_label
                   text: "25.6°C"
 
@@ -583,11 +589,12 @@ lvgl:
                   text: $solarprod
               - label:
                   align: bottom_left
-                  id: solar_fcst_today_label
+                  id: solar_fcst_tomorrow_label
                   text: "18.9"
               - label:
-                  align: bottom_right
-                  id: solar_fcst_tomorrow_label
+                  text_font: $text_value2_font
+                  align: CENTER
+                  id: solar_fcst_today_label
                   text: "17.5"
               - label:
                   align: top_right
