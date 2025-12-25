@@ -1,1 +1,7 @@
-
+sensor:
+  - platform: homeassistant
+    entity_id: sensor.mppt_power
+    id: mppt_power
+    on_value:
+      - lvgl.label.update:
+          id: mppt_power_value
