@@ -1,7 +1,12 @@
 sensor:
   - platform: homeassistant
-    entity_id: sensor.mppt_power
-    id: mppt_power
+    entity_id: sensor.soc
+    id: battery_soc
     on_value:
+      then:
+        lvgl.widget.update:
+          id: battery_soc_button
+          state:
+            checked: !lambda return x;
       - lvgl.label.update:
-          id: mppt_power_value
+          id: battery_soc_value
