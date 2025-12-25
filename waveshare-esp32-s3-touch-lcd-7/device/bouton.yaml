@@ -1,8 +1,8 @@
 substitutions:
   icon_font: icon_font
   text_font: roboto17_font
-  text_value_font: roboto40_font
-  text_value2_font: roboto30_font
+  text_value_font: roboto30_font
+  text_value2_font: roboto20_font
   button_on_color: "0xFF8C00"
   button_text_color: "0xFFFFFF"
   button_control_color: "0x313131"
