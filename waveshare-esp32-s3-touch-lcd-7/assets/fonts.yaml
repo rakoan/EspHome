@@ -9,6 +9,11 @@ font:
     size: 15
     bpp: 4
 
+  - file: "gfonts://Roboto"
+    id: roboto40_font
+    size: 40
+    bpp: 4
+
 lvgl:
   style_definitions:
     - id: roboto15_style
