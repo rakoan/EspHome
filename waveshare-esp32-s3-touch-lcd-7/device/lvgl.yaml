@@ -67,7 +67,7 @@ lvgl:
                   align: CENTER
                   text_align: CENTER
                   id: battery_soc_value                
-                  text: "-"
+                  text: "100"
               - label:
                   align: top_right
                   id: battery_soc_unit                
@@ -100,7 +100,7 @@ lvgl:
                   align: CENTER
                   text_align: CENTER
                   id: battery_voltage_value                
-                  text: "-"
+                  text: "53.1"
               - label:
                   align: top_right
                   id: battery_voltage_unit                
@@ -128,11 +128,11 @@ lvgl:
                   align: CENTER
                   text_align: CENTER
                   id: battery_power_value                
-                  text: "-"
+                  text: "-1.55"
               - label:
                   align: top_right
                   id: battery_power_unit                
-                  text: "W"    
+                  text: "kW"    
 
         #4 Battery Duration
         - button: 
@@ -156,7 +156,7 @@ lvgl:
                   align: CENTER
                   text_align: CENTER
                   id: battery_duration_value                
-                  text: "-"
+                  text: "360mn"
 
         #5 BMS Cells Voltage
         - button: 
@@ -179,12 +179,12 @@ lvgl:
                   text_font: $text_value2_font
                   align: top_mid
                   id: battery_cell_max_value
-                  text: "-"
+                  text: "3.35"
               - label:
                   text_font: $text_value2_font
                   align: bottom_mid
                   id: battery_cell_min_value 
-                  text: "-"
+                  text: "3.3"
               - label:
                   align: top_right
                   id: battery_cell_volt_unit                
@@ -211,7 +211,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: bms_cell_delta_value 
-                  text: "-"
+                  text: "15"
               - label:
                   align: top_right
                   id: bms_cell_delta_unit                
@@ -238,12 +238,12 @@ lvgl:
                   text_font: $text_value2_font
                   align: top_mid
                   id: bms_temp1_value
-                  text: "-"
+                  text: "26.2"
               - label:
                   text_font: $text_value2_font
                   align: bottom_mid
                   id: bms_temp2_value 
-                  text: "-"
+                  text: "25.9"
               - label:
                   align: top_right
                   id: bms_temp_unit                
@@ -270,7 +270,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: bms_mosfet_temp_value 
-                  text: "-"
+                  text: "30.5"
               - label:
                   align: top_right
                   id: bms_mosfet_temp_unit                
@@ -292,15 +292,15 @@ lvgl:
               - label:
                   align: bottom_left
                   id: Inverter_amp_label
-                  text: "- A"
+                  text: "10 A"
               - label:
                   align: top_right
                   id: inverter_volt_label 
-                  text: "- V"                  
+                  text: "230 V"                  
               - label:
                   align: bottom_right
                   id: inverter_freq_label 
-                  text: "- Hz"
+                  text: "49.9 Hz"
                   
         #10 Inverter Power
         - button: 
@@ -323,7 +323,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: inverter_power_value 
-                  text: "-"
+                  text: "4.5"
               - label:
                   align: top_right
                   id: inverter_power_unit                
@@ -350,12 +350,12 @@ lvgl:
                   text_font: $text_value2_font
                   align: top_mid
                   id: inverter_ac_temp_value
-                  text: "-"
+                  text: "28.4"
               - label:
                   text_font: $text_value2_font
                   align: bottom_mid
                   id: inverter_dc_temp_value 
-                  text: "-"
+                  text: "27.5"
               - label:
                   align: top_right
                   id: inverter_temp_unit                
@@ -382,7 +382,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: inverter_energy_value 
-                  text: "-"
+                  text: "10.5"
               - label:
                   align: top_right
                   id: inverter_energy_unit                
@@ -406,7 +406,7 @@ lvgl:
                   id: mppt_status_label
                   text: "MPPT"
               - label:
-                  text_font: $text_value2_font
+                  #text_font: $text_value2_font
                   align: CENTER
                   id: mppt_status_value 
                   text: "Stand By"
@@ -432,7 +432,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: mppt_power_value 
-                  text: "-"
+                  text: "5.0"
               - label:
                   align: top_right
                   id: mppt_power_unit                
@@ -459,7 +459,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: mppt_temp_value 
-                  text: "-"
+                  text: "25.5"
               - label:
                   align: top_right
                   id: mppt_temp_unit                
@@ -486,7 +486,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: mppt_energy_value 
-                  text: "-"
+                  text: "17.8"
               - label:
                   align: top_right
                   id: mppt_energy_unit                
@@ -515,7 +515,7 @@ lvgl:
               - label:
                   align: bottom_right
                   id: chauffe_o_temp                
-                  text: "-°C" 
+                  text: "55.2°C" 
                   
         #18 Water Pump
         - button: 
@@ -538,7 +538,7 @@ lvgl:
                   text_font: $text_value_font
                   align: CENTER
                   id: water_pump_value 
-                  text: "-"
+                  text: "2.5"
               - label:
                   align: top_right
                   id: water_pump_unit                
@@ -560,11 +560,11 @@ lvgl:
               - label:
                   align: bottom_left
                   id: meteo_rain_label
-                  text: "- mm"
+                  text: "00mm"
               - label:
                   align: bottom_right
                   id: meteo_temp_label
-                  text: "-°C"
+                  text: "25.6°C"
 
         #20 Solar Prod Forecast
         - button: 
@@ -582,11 +582,11 @@ lvgl:
               - label:
                   align: bottom_left
                   id: solar_fcst_today_label
-                  text: "- kWh"
+                  text: "18.9 kWh"
               - label:
                   align: bottom_right
                   id: solar_fcst_tomorrow_label
-                  text: "- kWh"
+                  text: "17.5 kWh"
 
 
 
