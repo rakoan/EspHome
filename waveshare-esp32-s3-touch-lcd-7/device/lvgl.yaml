@@ -20,7 +20,7 @@ lvgl:
           align: top_mid
           x: 0
           y: 4
-          text_align: top_right
+          text_align: center
           text_color: 0xFFFFFF
       # wifi status
       - label:
@@ -28,8 +28,6 @@ lvgl:
           id: display_wifi
           styles: roboto15_style
           align: top_right
-          x: 0
-          y: 4
           text_color: 0xFFFFFF
           
   pages:
