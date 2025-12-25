@@ -22,9 +22,9 @@ lvgl:
           y: 4
           text_align: top_right
           text_color: 0xFFFFFF
-
+      # wifi status
       - label:
-          text: "--:--"
+          text: "\U000F05AA"
           id: display_wifi
           styles: roboto15_style
           align: top_right
