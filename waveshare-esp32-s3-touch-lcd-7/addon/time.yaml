@@ -26,13 +26,13 @@ script:
     then:
       - lvgl.label.update:
           id: display_time
-          #text:
-            #time_format: "%H:%M"
-          text: !lambda |-
-            static char time_buf[17];
-            auto now = id(homeassistant_time).now();
-            snprintf(time_buf, sizeof(time_buf), "%02d:%02d", now.hour, now.minute);
-            return time_buf;
+          text:
+            time_format: "%H:%M"
+          #text: !lambda |-
+           # static char time_buf[17];
+            #auto now = id(homeassistant_time).now();
+            #snprintf(time_buf, sizeof(time_buf), "%02d:%02d", now.hour, now.minute);
+            #return time_buf;
   - id: display_off
     then:
       - switch.turn_off: backlight
