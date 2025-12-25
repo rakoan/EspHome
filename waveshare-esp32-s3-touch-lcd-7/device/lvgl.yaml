@@ -503,9 +503,9 @@ lvgl:
                   text: "°C" 
               - label:
                   text_font: $text_value_font
-                  align: right_mid
+                  align: center
                   id: chauffe_o_temp                
-                  text: "55.2" 
+                  text: "50" 
                   
         #18 Water Pump
         - button: 
