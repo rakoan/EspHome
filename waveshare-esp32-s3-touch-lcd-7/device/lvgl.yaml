@@ -187,7 +187,7 @@ lvgl:
                   text: "-"
               - label:
                   align: top_right
-                  id: battery_power_unit                
+                  id: battery_cell_volt_unit                
                   text: "V"   
 
         #6 BMS Cell Delta
