@@ -13,10 +13,16 @@ font:
       "\U000F1A73",  # mdi-solar-power-variant
       "\U000F058F",  # mdi-water-pump
       "\U000F09A1",  # mdi-shower-head
-      "\U000F05A9",  # mdi-wifi
-      "\U000F05AA",  # mdi-wifi-off
       "\U000F0596",  # mdi-weather-pouring
       "\U000F0A72",  # mdi-solar-power
+      ]
+  - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
+    id: icon_small_font
+    size: 15
+    bpp: 4
+    glyphs: [
+      "\U000F05A9",  # mdi-wifi
+      "\U000F05AA",  # mdi-wifi-off
       ]
 # https://pictogrammers.github.io/@mdi/font/7.4.47/
 # Map icons to names
