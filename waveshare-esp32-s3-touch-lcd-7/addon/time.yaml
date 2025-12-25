@@ -37,7 +37,7 @@ script:
     then:
       - switch.turn_off: backlight
       - lvgl.pause:
-           show_snow:true
+          show_snow: true
   - id: display_on
     then:
       - lvgl.resume:
