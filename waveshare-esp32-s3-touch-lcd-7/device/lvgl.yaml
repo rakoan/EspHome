@@ -69,7 +69,7 @@ lvgl:
                   align: CENTER
                   text_align: CENTER
                   id: battery_soc_value                
-                  text: "100"
+                  text: "99.9"
               - label:
                   align: top_right
                   id: battery_soc_unit                
@@ -154,9 +154,8 @@ lvgl:
                   id: battery_duration_label
                   text: "Duration"
               - label:
-                  #text_font: $text_value_font
-                  align: CENTER
-                  text_align: CENTER
+                  text_font: $text_value2_font
+                  align: right_mid
                   id: battery_duration_value                
                   text: "360mn"
 
@@ -186,7 +185,7 @@ lvgl:
                   text_font: $text_value2_font
                   align: bottom_mid
                   id: battery_cell_min_value 
-                  text: "3.3"
+                  text: "3.31"
               - label:
                   align: top_right
                   id: battery_cell_volt_unit                
@@ -238,14 +237,9 @@ lvgl:
                   text: "T°"                  
               - label:
                   text_font: $text_value2_font
-                  align: top_mid
-                  id: bms_temp1_value
-                  text: "26.2"
-              - label:
-                  text_font: $text_value2_font
-                  align: bottom_mid
-                  id: bms_temp2_value 
-                  text: "25.9"
+                  align: right_mid
+                  id: bms_temp_value
+                  text: "26.2 | 25.9"
               - label:
                   align: top_right
                   id: bms_temp_unit                
@@ -409,7 +403,7 @@ lvgl:
                   text: "MPPT"
               - label:
                   #text_font: $text_value2_font
-                  align: CENTER
+                  align: right_mid
                   id: mppt_status_value 
                   text: "Stand By"
 
@@ -515,8 +509,8 @@ lvgl:
                   id: chauffe_o_status                
                   text: "OFF" 
               - label:
-                  text_font: $text_value2_font
-                  align: center
+                  text_font: $text_value_font
+                  align: right_mid
                   id: chauffe_o_temp                
                   text: "55.2°C" 
                   
@@ -561,7 +555,7 @@ lvgl:
                   id: meteo_icon                
                   text: $orana
               - label:
-                  text_font: $text_value2_font
+                  text_font: $text_value_font
                   align: CENTER
                   id: meteo_rain_label
                   text: "75"
@@ -588,11 +582,11 @@ lvgl:
                   id: solar_fcst_icon                
                   text: $solarprod
               - label:
-                  align: bottom_left
+                  align: bottom_right
                   id: solar_fcst_tomorrow_label
                   text: "18.9"
               - label:
-                  text_font: $text_value2_font
+                  text_font: $text_value_font
                   align: CENTER
                   id: solar_fcst_today_label
                   text: "17.5"
