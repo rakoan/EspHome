@@ -165,184 +165,230 @@ lvgl:
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: bms_cell_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: battery_cell_icon                
+                  text: $battery_cells
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: battery_cell_label
+                  text: "BMS"
+              - label:
+                  text_font: $text_value2_font
+                  align: top_mid
+                  id: battery_cell_max_value
+                  text: "-"
+              - label:
+                  text_font: $text_value2_font
+                  align: bottom_mid
+                  id: battery_cell_min_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: battery_power_unit                
+                  text: "V"   
 
-        # Office Features Scene
+        # BMS Cell Delta
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: bms_cell_delta_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: bms_cell_delta_icon                
+                  text: $battery_cells
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: bms_cell_delta_label
+                  text: "DeltaV"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: bms_cell_delta_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: bms_cell_delta_unit                
+                  text: "mV" 
 
-        # Office Features Scene
+        # BMS cell Temperature
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: bms_temp_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: bms_temp_icon                
+                  text: $battery_cells
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: bms_temp_label
+                  text: "T°"                  
+              - label:
+                  text_font: $text_value2_font
+                  align: top_mid
+                  id: bms_temp1_value
+                  text: "-"
+              - label:
+                  text_font: $text_value2_font
+                  align: bottom_mid
+                  id: bms_temp2_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: bms_temp_unit                
+                  text: "°C" 
                     
-        # Office Features Scene
+        # BMS Mosfet Temperature
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: bms_mosfet_temp_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: bms_mosfet_temp_icon                
+                  text: $battery_cells
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: bms_mosfet_temp_label
+                  text: "Mosfet"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: bms_mosfet_temp_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: bms_mosfet_temp_unit                
+                  text: "°C" 
 
-        # Office Features Scene
+        # Inverter Voltage/Freq/Amp
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: Inverter_volt_freq_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: Inverter_volt_freq_icon                
+                  text: $inverter
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: Inverter_amp_label
+                  text: "- A"
+              - label:
+                  align: top_right
+                  id: inverter_volt_label 
+                  text: "- V"                  
+              - label:
+                  align: bottom_right
+                  id: inverter_freq_label 
+                  text: "- Hz"
+                  
+        # Inverter Power
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: inverter_power_button
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: inverter_power_icon                
+                  text: $inverter
+              - label:
+                  align: bottom_left
+                  id: inverter_powers_label
+                  text: "Power"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: inverter_power_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: inverter_power_unit                
+                  text: "kW" 
 
-        # Office Features Scene
+        # Inverter Temperature AC-DC
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: inverter_temp_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: inverter_temp_icon                
+                  text: $inverter
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: inverter_temp_label
+                  text: "T°"
+              - label:
+                  text_font: $text_value2_font
+                  align: top_mid
+                  id: inverter_ac_temp_value
+                  text: "-"
+              - label:
+                  text_font: $text_value2_font
+                  align: bottom_mid
+                  id: inverter_dc_temp_value 
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: inverter_temp_unit                
+                  text: "°C" 
 
-        # Office Features Scene
+        # Inverter Energy Output
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: inverter_energy_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: inverter_energy_icon                
+                  text: $inverter
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
-
-        # Office Features Scene
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: office_scene_features_button
-            styles: control
-            widgets:
+                  id: inverter_energy_label
+                  text: "Energy"
               - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  text_font: $text_value_font
+                  align: CENTER
+                  id: inverter_energy_value 
+                  text: "-"
               - label:
-                  align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  align: top_right
+                  id: inverter_energy_unit                
+                  text: "kWh" 
                     
         # Office Features Scene
         - button: 
