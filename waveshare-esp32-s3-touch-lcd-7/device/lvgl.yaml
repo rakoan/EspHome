@@ -65,7 +65,7 @@ lvgl:
                   id: battery_soc_label
                   text: "SoC"
               - label:
-                  text_font: roboto40_font
+                  text_font: $text_value_font
                   align: CENTER
                   text_align: CENTER
                   id: battery_soc_value                
@@ -98,7 +98,7 @@ lvgl:
                   id: battery_voltage_label
                   text: "Voltage"
               - label:
-                  text_font: roboto40_font
+                  text_font: $text_value_font
                   align: CENTER
                   text_align: CENTER
                   id: battery_voltage_value                
@@ -108,53 +108,59 @@ lvgl:
                   id: battery_voltage_unit                
                   text: "V"    
                     
-        # Office Features Scene
+        # Battery Power
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: battery_power_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: battery_power_icon                
+                  text: $battery
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: battery_power_label
+                  text: "Power"
+              - label:
+                  text_font: $text_value_font
+                  align: CENTER
+                  text_align: CENTER
+                  id: battery_power_value                
+                  text: "-"
+              - label:
+                  align: top_right
+                  id: battery_power_unit                
+                  text: "W"    
 
-        # Office Features Scene
+        # Battery Duration
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: office_scene_features_button
+            id: battery_duration_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
-                  text: $ledstrip
+                  id: battery_duration_icon                
+                  text: $battery
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_features
+                  id: battery_duration_label
+                  text: "Duration"
+              - label:
+                  #text_font: $text_value_font
+                  align: CENTER
+                  text_align: CENTER
+                  id: battery_duration_value                
+                  text: "-"
 
-        # Office Features Scene
+        # BMS Cells Voltage
         - button: 
             height: $button_height_single
             width: $button_width
